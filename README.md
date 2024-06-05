@@ -2,7 +2,7 @@
 social-media-client
 
 # Live Website Link:
-https://lighthearted-pasca-80d87e.netlify.app/
+https://social-media-world-client.vercel.app/
 
 # Admin information:
 Email: admin@gmail.com
