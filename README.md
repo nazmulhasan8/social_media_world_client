@@ -1,12 +1,12 @@
 # Project Name:
-social-media-client
+social-media-world-client
 
 # Live Website Link:
 https://social-media-world-client.vercel.app/
 
 # Admin information:
-Email: admin@gmail.com
-PassWord: A$fTYTY^&&^&&^vvdh%GGHJs55hdhhsdjhG55&FGFG
+ Email: admin@gmail.com
+ PassWord: A$fTYTY^&&^&&^vvdh%GGHJs55hdhhsdjhG55&FGFG
 
 1. Vite react app setup
 

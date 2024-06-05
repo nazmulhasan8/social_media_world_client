@@ -55,7 +55,7 @@ const router = createBrowserRouter([
 
                 {
                     path: '/searchyou',
-                    element: <Searchyou></Searchyou>
+                    element: <PrivateRoute><Searchyou></Searchyou></PrivateRoute>
                 },
 
                 {
