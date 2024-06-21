@@ -46,7 +46,7 @@ const SignUp = () => {
 
     const saveUser = (name, email, role) =>{
         const user ={name, email, role};
-        fetch('social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/users', {
+        fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

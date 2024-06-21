@@ -17,7 +17,7 @@ const ReportedProduct = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/reporttoadmin`;
+    const url = `http://localhost:5000/reporttoadmin`;
 
     const { data: bookings = [], isLoading, refetch } = useQuery({
         queryKey: ['bookings'],
@@ -34,7 +34,7 @@ const ReportedProduct = () => {
 
 
     const handleDeleteProduct = booking => {
-        fetch(`social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/reporttoadmin/${booking._id}`, {
+        fetch(`http://localhost:5000/reporttoadmin/${booking._id}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -50,7 +50,7 @@ const ReportedProduct = () => {
     }
 
     // const handleUserDeleteByAdmin = id => {
-    //     fetch(`social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/users/${id}`, {
+    //     fetch(`http://localhost:5000/users/${id}`, {
     //         method: 'DELETE', 
     //         headers: {
     //             authorization: `bearer ${localStorage.getItem('accessToken')}`

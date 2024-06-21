@@ -9,7 +9,7 @@ const AllCategories = () => {
     const { data: products = [], refetch, isLoading } = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
-            const res = await fetch(`social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/categories`);
+            const res = await fetch(`http://localhost:5000/categories`);
             const data = await res.json();
             return data;
         }

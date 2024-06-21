@@ -1,12 +1,22 @@
+
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
+import BookingModal4s from '../../BookingModal2/BookingModal4s';
+import ProductOption4s from '../../ProductAvailable/ProductOption4s';
+
+
+
+
+
+
+
 
 
 
 const Searchyou = () => {
 
    
-    const url = `social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/allProducts4`;
+    const url = `http://localhost:5000/allProducts4`;
    
 
     const { data: products3 = [], isLoading, refetch } = useQuery({
@@ -35,6 +45,8 @@ const Searchyou = () => {
 
   const [value, setValue] = useState("");
 
+
+  
 const onChange = (event) => {
 setValue(event.target.value);
 };
@@ -42,17 +54,18 @@ setValue(event.target.value);
   const onSearch = (searchTerm) => {
 setValue(searchTerm);
 
+
     console.log("search", searchTerm);
   };
 
   console.log(value);
 
 
+  
 
+  
 
- 
-
-  const url2 = `social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/searchResult?value=${value}`;
+  const url2 = `http://localhost:5000/searchResult?value=${value}`;
 
   const {data: manageProducts2 = [] } = useQuery({
       queryKey: ['manageProducts2'],
@@ -72,6 +85,27 @@ console.log(manageProducts2);
 
 
 
+
+
+
+
+
+
+
+
+const [selectedDate2, setSelectedDate2] = useState(new Date());
+const [itemValue7, setItemValue7] = useState(null);
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className="App">
 <h1></h1>
@@ -80,6 +114,11 @@ console.log(manageProducts2);
       <input type="text" value={value} onChange={onChange} />
       <button onClick={() => onSearch(value)}> Search </button>
     </div>
+
+
+
+
+    
 <div className='dropdown'>
 {products3
 .filter((item) => {
@@ -113,6 +152,56 @@ key={item.title}
   <div className='mt-9'>Search Result: {value} </div>
 
 
+
+
+
+
+
+  {
+       <section className='my-16'>
+             <div className='text-center mb-4 mt-10'>
+            <p className="text-5xl font-bold text-orange-600 my-10"></p>
+            
+            <p></p>
+        </div>
+        <div className='grid gap-6 justify-items-center grid-cols-1 md:grid-cols-1 lg:grid-cols-1 mt-10 my-30'>
+            
+        {
+
+
+itemValue7 &&
+ <ProductOption4s
+                 
+                 productValue={manageProducts2}
+                 setItemValue={setItemValue7}
+                 refetch2={refetch}
+                 
+                 
+                 >
+
+                 </ProductOption4s>
+            
+        }
+
+        </div>
+        {
+            itemValue7 &&
+            <BookingModal4s
+            
+            
+            selectedDate2={selectedDate2}
+            itemValue={itemValue7}
+            setItemValue={setItemValue7}
+            
+            >
+
+            </BookingModal4s>
+            
+                
+            
+        }
+    </section>
+}
 
 
 

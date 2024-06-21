@@ -19,7 +19,7 @@ console.log(title);
 
     useEffect(() => {
         // Create PaymentIntent 
-        fetch("social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/create-payment-intent", {
+        fetch("http://localhost:5000/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -83,7 +83,7 @@ console.log(title);
                 email,
                 productId: productId
             }
-            fetch('social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/payments', {
+            fetch('http://localhost:5000/payments', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

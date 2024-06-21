@@ -5,7 +5,7 @@ import ProductBanner from './ProductBanner';
 
 const AllProducts2 = () => {
 
-    const url = `social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/allPosts3`;
+    const url = `http://localhost:5000/allPosts3`;
    
 
     const { data: products3 = [], isLoading, refetch } = useQuery({

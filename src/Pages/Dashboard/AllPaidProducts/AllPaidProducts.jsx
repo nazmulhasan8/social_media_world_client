@@ -24,7 +24,7 @@ const AllPaidProducts = () => {
     const {data: bookings = [],isLoading, refetch} = useQuery({
         queryKey: ['bookings'],
         queryFn: async() =>{
-            const res = await fetch('social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/allProducts');
+            const res = await fetch('http://localhost:5000/allProducts');
             const data = await res.json();
             return data;
         }
@@ -32,7 +32,7 @@ const AllPaidProducts = () => {
 
 
     const handleDeleteProduct = booking => {
-        fetch(`social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/allProducts/${booking.productId}`, {
+        fetch(`http://localhost:5000/allProducts/${booking.productId}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

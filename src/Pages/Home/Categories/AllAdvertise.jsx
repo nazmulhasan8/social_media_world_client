@@ -16,7 +16,7 @@ const AllAdvertise = () => {
     const { data: products3 = [], refetch, isLoading } = useQuery({
         queryKey: ['products3'],
         queryFn: async () => {
-            const res = await fetch(`social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/advertise`);
+            const res = await fetch(`http://localhost:5000/advertise`);
             const data = await res.json();
             return data;
         }

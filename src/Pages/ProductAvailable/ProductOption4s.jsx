@@ -12,7 +12,7 @@ import MyComments from '../Dashboard/MyOrders/MyComments';
 import ConfirmationModal from '../Shared/ConfirmationModal/ConfirmationModal';
 
 
-const ProductOption = ({ productValue, setItemValue, refetch2 }) => {
+const ProductOption4s = ({ productValue, setItemValue, refetch2 }) => {
 
     const { _id, likeValue, img, title, categoryName, description, sellerName, paid, sellerEmail, location, originalPrice, resalePrice, yearsOfUse, postedTime, conditionType, sellerMobileNumber, YearOfPurchase  } = productValue;
     
@@ -207,4 +207,4 @@ const handleReportProduct = productValue => {
     );
 };
 
-export default ProductOption;
+export default ProductOption4s;

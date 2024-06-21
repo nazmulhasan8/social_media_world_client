@@ -22,7 +22,7 @@ const MyComments = ({_id}) => {
 
     console.log(user);
 
-    const url = `social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/bookingsProduct2/${_id}`;
+    const url = `http://localhost:5000/bookingsProduct2/${_id}`;
    
 
     const { data: bookings = [], isLoading, refetch } = useQuery({
@@ -47,7 +47,7 @@ const MyComments = ({_id}) => {
 
 
     const handleDeleteProduct = booking => {
-        fetch(`social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/bookingsProduct/${booking._id}`, {
+        fetch(`http://localhost:5000/bookingsProduct/${booking._id}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

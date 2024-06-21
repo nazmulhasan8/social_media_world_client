@@ -11,7 +11,7 @@ const AllProducts = () => {
 
 
 
-    const url = `social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/allProducts4`;
+    const url = `http://localhost:5000/allProducts4`;
    
 
     const { data: products4 = [], isLoading, refetch } = useQuery({

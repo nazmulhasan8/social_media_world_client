@@ -17,7 +17,7 @@ const MyOrders = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/bookingsProduct?email=${user?.email}`;
+    const url = `http://localhost:5000/bookingsProduct?email=${user?.email}`;
 
     const { data: bookings = [], isLoading, refetch } = useQuery({
         queryKey: ['bookings', user?.email],
@@ -34,7 +34,7 @@ const MyOrders = () => {
 
 
     const handleDeleteProduct = booking => {
-        fetch(`social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/bookingsProduct/${booking._id}`, {
+        fetch(`http://localhost:5000/bookingsProduct/${booking._id}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

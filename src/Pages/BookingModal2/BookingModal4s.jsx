@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../contexts/AuthProvider';
 
-const BookingModal2 = ({ itemValue, setItemValue, selectedDate2, refetch }) => {
+const BookingModal4s = ({ itemValue, setItemValue, selectedDate2, refetch }) => {
 
     // treatment is just another name of appointmentOptions with name, slots, _id
     const { _id, img, title,paid, productId, description, sellerName, location, sellerEmail, originalPrice, resalePrice, yearsOfUse, postedTime, conditionType, sellerMobileNumber, YearOfPurchase } = itemValue;
@@ -114,4 +114,4 @@ const BookingModal2 = ({ itemValue, setItemValue, selectedDate2, refetch }) => {
     );
 };
 
-export default BookingModal2;
+export default BookingModal4s;

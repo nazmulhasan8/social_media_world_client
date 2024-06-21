@@ -56,7 +56,7 @@ const AddProducts = () => {
                 }
 
                 // save Products information to the database
-                fetch('social-media-world-server-nuhwx57e6-nazmulhasan8s-projects.vercel.app/allProducts', {
+                fetch('http://localhost:5000/allProducts', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json', 
