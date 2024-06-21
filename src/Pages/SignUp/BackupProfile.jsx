@@ -1,6 +1,6 @@
 const saveUser = (name, email, role) => {
   const user = { name, email, role };
-  fetch("http://localhost:5000/users", {
+  fetch("https://social-media-world-server.onrender.com/users", {
     method: "POST",
     headers: {
       "content-type": "application/json",

@@ -47,7 +47,7 @@ const AddComment = ({products2}) => {
         // TODO: send data to the server
         // and once data is saved then close the modal 
         // and display success toast
-        fetch('http://localhost:5000/bookingsProduct2', {
+        fetch('https://social-media-world-server.onrender.com/bookingsProduct2', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

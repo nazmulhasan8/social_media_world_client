@@ -17,7 +17,7 @@ const MyOrders = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/bookingsProduct?email=${user?.email}`;
+    const url = `https://social-media-world-server.onrender.com/bookingsProduct?email=${user?.email}`;
 
     const { data: bookings = [], isLoading, refetch } = useQuery({
         queryKey: ['bookings', user?.email],
@@ -34,7 +34,7 @@ const MyOrders = () => {
 
 
     const handleDeleteProduct = booking => {
-        fetch(`http://localhost:5000/bookingsProduct/${booking._id}`, {
+        fetch(`https://social-media-world-server.onrender.com/bookingsProduct/${booking._id}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

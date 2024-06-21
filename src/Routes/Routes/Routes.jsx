@@ -92,7 +92,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/allProducts2/${params.id}`
+            `https://social-media-world-server.onrender.com/allProducts2/${params.id}`
           ),
       },
 
@@ -101,7 +101,7 @@ const router = createBrowserRouter([
         element: <AllProducts></AllProducts>,
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/allProducts/${params.id}`
+            `https://social-media-world-server.onrender.com/allProducts/${params.id}`
           ),
       },
 
@@ -170,7 +170,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/bookingsProduct/${params.id}`
+            `https://social-media-world-server.onrender.com/bookingsProduct/${params.id}`
           ),
       },
     ],

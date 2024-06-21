@@ -24,7 +24,7 @@ const ManageProducts = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/allProducts?email=${user?.email}`;
+    const url = `https://social-media-world-server.onrender.com/allProducts?email=${user?.email}`;
 
     const {data: manageProducts = [], isLoading, refetch  } = useQuery({
         queryKey: ['manageProducts', user?.email],
@@ -41,7 +41,7 @@ const ManageProducts = () => {
 console.log(manageProducts);
     
     const handleDeleteProduct = booking => {
-        fetch(`http://localhost:5000/allProducts/${booking._id}`, {
+        fetch(`https://social-media-world-server.onrender.com/allProducts/${booking._id}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -63,7 +63,7 @@ console.log(manageProducts);
 
 
     const handleAdvertiseProduct = booking => {
-        fetch(`http://localhost:5000/advertise`, {
+        fetch(`https://social-media-world-server.onrender.com/advertise`, {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json', 

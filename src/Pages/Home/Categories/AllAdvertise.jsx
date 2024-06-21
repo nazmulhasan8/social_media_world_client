@@ -16,7 +16,7 @@ const AllAdvertise = () => {
     const { data: products3 = [], refetch, isLoading } = useQuery({
         queryKey: ['products3'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/advertise`);
+            const res = await fetch(`https://social-media-world-server.onrender.com/advertise`);
             const data = await res.json();
             return data;
         }

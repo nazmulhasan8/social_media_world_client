@@ -11,7 +11,7 @@ const AllProducts = () => {
 
 
 
-    const url = `http://localhost:5000/allProducts4`;
+    const url = `https://social-media-world-server.onrender.com/allProducts4`;
    
 
     const { data: products4 = [], isLoading, refetch } = useQuery({

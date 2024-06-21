@@ -27,7 +27,7 @@ const Details = () => {
 
     const handleStatusUpdate = id => {
         setLike(like+1);
-        fetch(`http://localhost:5000/orders4/${id}`, {
+        fetch(`https://social-media-world-server.onrender.com/orders4/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -79,7 +79,7 @@ const Details = () => {
         // TODO: send data to the server
         // and once data is saved then close the modal 
         // and display success toast
-        fetch('http://localhost:5000/bookingsProduct2', {
+        fetch('https://social-media-world-server.onrender.com/bookingsProduct2', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

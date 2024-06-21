@@ -24,7 +24,7 @@ const AllPaidProducts = () => {
     const {data: bookings = [],isLoading, refetch} = useQuery({
         queryKey: ['bookings'],
         queryFn: async() =>{
-            const res = await fetch('http://localhost:5000/allProducts');
+            const res = await fetch('https://social-media-world-server.onrender.com/allProducts');
             const data = await res.json();
             return data;
         }
@@ -32,7 +32,7 @@ const AllPaidProducts = () => {
 
 
     const handleDeleteProduct = booking => {
-        fetch(`http://localhost:5000/allProducts/${booking.productId}`, {
+        fetch(`https://social-media-world-server.onrender.com/allProducts/${booking.productId}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

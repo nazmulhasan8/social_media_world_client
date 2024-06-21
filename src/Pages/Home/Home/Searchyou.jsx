@@ -16,7 +16,7 @@ import ProductOption4s from '../../ProductAvailable/ProductOption4s';
 const Searchyou = () => {
 
    
-    const url = `http://localhost:5000/allProducts4`;
+    const url = `https://social-media-world-server.onrender.com/allProducts4`;
    
 
     const { data: products3 = [], isLoading, refetch } = useQuery({
@@ -65,7 +65,7 @@ setValue(searchTerm);
 
   
 
-  const url2 = `http://localhost:5000/searchResult?value=${value}`;
+  const url2 = `https://social-media-world-server.onrender.com/searchResult?value=${value}`;
 
   const {data: manageProducts2 = [] } = useQuery({
       queryKey: ['manageProducts2'],

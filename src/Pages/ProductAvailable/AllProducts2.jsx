@@ -5,7 +5,7 @@ import ProductBanner from './ProductBanner';
 
 const AllProducts2 = () => {
 
-    const url = `http://localhost:5000/allPosts3`;
+    const url = `https://social-media-world-server.onrender.com/allPosts3`;
    
 
     const { data: products3 = [], isLoading, refetch } = useQuery({

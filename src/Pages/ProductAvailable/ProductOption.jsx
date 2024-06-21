@@ -24,7 +24,7 @@ const ProductOption = ({ productValue, setItemValue, refetch2 }) => {
 
     const handleStatusUpdate = id => {
         setLike(like+1);
-        fetch(`http://localhost:5000/orders4/${id}`, {
+        fetch(`https://social-media-world-server.onrender.com/orders4/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -53,7 +53,7 @@ const ProductOption = ({ productValue, setItemValue, refetch2 }) => {
     const {data: mongobdUsers = [], refetch} = useQuery({
         queryKey: ['mongobdUsers'],
         queryFn: async() =>{
-            const res = await fetch('http://localhost:5000/sellers');
+            const res = await fetch('https://social-media-world-server.onrender.com/sellers');
             const data = await res.json();
             return data;
         }
@@ -74,7 +74,7 @@ const closeModal = () => {
 }
 
 const handleReportProduct = productValue => {
-    fetch(`http://localhost:5000/reporttoadmin`, {
+    fetch(`https://social-media-world-server.onrender.com/reporttoadmin`, {
         method: 'POST', 
         headers: {
             'content-type': 'application/json', 

@@ -19,7 +19,7 @@ console.log(title);
 
     useEffect(() => {
         // Create PaymentIntent 
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://social-media-world-server.onrender.com/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -83,7 +83,7 @@ console.log(title);
                 email,
                 productId: productId
             }
-            fetch('http://localhost:5000/payments', {
+            fetch('https://social-media-world-server.onrender.com/payments', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

@@ -17,7 +17,7 @@ const AllSellers = () => {
     const {data: users = [],isLoading, refetch} = useQuery({
         queryKey: ['users'],
         queryFn: async() =>{
-            const res = await fetch('http://localhost:5000/sellers');
+            const res = await fetch('https://social-media-world-server.onrender.com/sellers');
             const data = await res.json();
             return data;
         }
@@ -26,7 +26,7 @@ const AllSellers = () => {
 
 
     const handleStatusUpdate = id => {
-        fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://social-media-world-server.onrender.com/users/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -46,7 +46,7 @@ const AllSellers = () => {
 
 
     const handleMakeAdmin = id => {
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://social-media-world-server.onrender.com/users/admin/${id}`, {
             method: 'PUT', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -63,7 +63,7 @@ const AllSellers = () => {
 
 
     const handleUserDeleteByAdmin = id => {
-      fetch(`http://localhost:5000/users/${id}`, {
+      fetch(`https://social-media-world-server.onrender.com/users/${id}`, {
           method: 'DELETE', 
           headers: {
               authorization: `bearer ${localStorage.getItem('accessToken')}`

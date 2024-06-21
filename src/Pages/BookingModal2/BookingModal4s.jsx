@@ -38,7 +38,7 @@ const BookingModal4s = ({ itemValue, setItemValue, selectedDate2, refetch }) => 
         // TODO: send data to the server
         // and once data is saved then close the modal 
         // and display success toast
-        fetch('http://localhost:5000/bookingsProduct', {
+        fetch('https://social-media-world-server.onrender.com/bookingsProduct', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
